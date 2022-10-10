@@ -9,7 +9,7 @@ const Header = () => {
         <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
                 <Link
-                    href="/"
+                    to="/"
                     aria-label="Company"
                     title="Company"
                     className="inline-flex items-center"
@@ -22,7 +22,7 @@ const Header = () => {
                 <ul className="flex items-center hidden space-x-8 lg:flex">
                     <li>
                         <NavLink
-                            href="/topic"
+                            to="/topic"
                             aria-label="Our topic"
                             title="Our topic"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -32,7 +32,7 @@ const Header = () => {
                     </li>
                     <li>
                         <NavLink
-                            href="/statistics"
+                            to="/statistics"
                             aria-label="Our statistics"
                             title="Our statistics"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -42,7 +42,7 @@ const Header = () => {
                     </li>
                     <li>
                         <NavLink
-                            href="/blog"
+                            to="/blog"
                             aria-label="Our blog"
                             title="Our blog"
                             className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -79,7 +79,7 @@ const Header = () => {
                                 <div className="flex items-center justify-between mb-4">
                                     <div>
                                         <Link
-                                            href="/"
+                                            to="/"
                                             aria-label="Company"
                                             title="Company"
                                             className="inline-flex items-center"
@@ -110,7 +110,7 @@ const Header = () => {
                                     <ul className="space-y-4">
                                         <li>
                                             <NavLink
-                                                href="/topic"
+                                                to="/topic"
                                                 aria-label="Our topic"
                                                 title="Our topic"
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -120,7 +120,7 @@ const Header = () => {
                                         </li>
                                         <li>
                                             <NavLink
-                                                href="/statistics"
+                                                to="/statistics"
                                                 aria-label="Our statistics"
                                                 title="Our statistics"
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -130,7 +130,7 @@ const Header = () => {
                                         </li>
                                         <li>
                                             <NavLink
-                                                href="/blog"
+                                                to="/blog"
                                                 aria-label="Our blog"
                                                 title="Our blog"
                                                 className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
