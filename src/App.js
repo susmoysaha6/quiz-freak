@@ -10,16 +10,15 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Main></Main>,
+    loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
     errorElement: <Error></Error>,
     children: [
       {
         path: '/',
-        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         element: <Topic></Topic>
       },
       {
         path: '/topic',
-        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         element: <Topic></Topic>
       },
       {
@@ -36,7 +35,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App bg-gray-100">
+    <div className="App">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import icon from '../../images/icon.png'
+import './Header.css'
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="px-4 py-5 mx-auto bg-gray-100 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
                 <Link
                     to="/"
@@ -20,32 +21,31 @@ const Header = () => {
                     </span>
                 </Link>
                 <ul className="flex items-center hidden space-x-8 lg:flex">
-                    <li>
+                    <li className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
                         <NavLink
                             to="/topic"
                             aria-label="Our topic"
                             title="Our topic"
-                            className="font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            // className={}
+                            className={({ isActive }) => isActive ? 'active' : undefined}
                         >
                             Topic
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
                         <NavLink
                             to="/statistics"
                             aria-label="Our statistics"
                             title="Our statistics"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             Statistics
                         </NavLink>
                     </li>
-                    <li>
+                    <li className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">
                         <NavLink
                             to="/blog"
                             aria-label="Our blog"
                             title="Our blog"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             Blog
                         </NavLink>
