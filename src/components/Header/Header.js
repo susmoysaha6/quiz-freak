@@ -6,7 +6,7 @@ const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="px-4 py-5 mx-auto bg-gray-100 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
             <div className="relative flex items-center justify-between">
                 <Link
                     to="/"
@@ -25,7 +25,7 @@ const Header = () => {
                             to="/topic"
                             aria-label="Our topic"
                             title="Our topic"
-                            className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                            className="font-medium tracking-wide  text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
                         >
                             Topic
                         </NavLink>

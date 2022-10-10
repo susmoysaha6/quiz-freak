@@ -14,10 +14,12 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         element: <Topic></Topic>
       },
       {
         path: '/topic',
+        loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
         element: <Topic></Topic>
       },
       {
@@ -31,6 +33,7 @@ const router = createBrowserRouter([
     ]
   }
 ])
+
 function App() {
   return (
     <div className="App">
