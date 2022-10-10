@@ -1,14 +1,16 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import SingleTopic from '../SingleTopic/SingleTopic';
 
 const Topic = () => {
     const data = useLoaderData();
     const topics = data.data;
-    console.log(topics);
 
     return (
         <div>
-            <h1>This is topic: {topics.length}</h1>
+            {
+                topics.map(topic => <SingleTopic key={topic.id} topic={topic}></SingleTopic>)
+            }
         </div>
     );
 };
