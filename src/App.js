@@ -3,6 +3,7 @@ import './App.css';
 import Blog from './components/Blog/Blog';
 import Error from './components/Error/Error';
 import Main from './components/Main/Main';
+import Quiz from './components/Quiz/Quiz';
 import Statistics from './components/Statistics/Statistics';
 import Topic from './components/Topic/Topic';
 
@@ -28,6 +29,13 @@ const router = createBrowserRouter([
       {
         path: '/blog',
         element: <Blog></Blog>
+      },
+      {
+        path: '/topic/:id',
+        loader: async ({ params }) => {
+          return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+        },
+        element: < Quiz ></Quiz >
       }
     ]
   }
