@@ -3,11 +3,8 @@ import Options from '../Options/Options';
 import Swal from 'sweetalert2';
 
 const SingleQuiz = ({ quiz, index }) => {
-    // console.log(quiz);
-    const { options, correctAnswer, question } = quiz;
+    const { options, correctAnswer, question, id } = quiz;
 
-    // console.log(quiz);
-    // console.log(options);
     return (
         <div className='mt-3 shadow-lg border rounded-lg py-2 px-3'>
             <div className='flex items-center justify-between text-gray-600'>
@@ -27,7 +24,7 @@ const SingleQuiz = ({ quiz, index }) => {
             </div>
             <div className='grid md:grid-cols-2 gap-5 mt-3'>
                 {
-                    options.map((option, index) => <Options correctAnswer={correctAnswer} key={index} option={option} index={index}></Options>)
+                    options.map((option, index) => <Options correctAnswer={correctAnswer} key={index} option={option} index={index} id={id}></Options>)
                 }
             </div>
         </div>

@@ -1,10 +1,13 @@
-import React from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import React, { useContext } from 'react';
+import { toast } from 'react-toastify';
+import { CorrectContex, WrongContext } from '../Quiz/Quiz';
 
 const Options = ({ option, index, correctAnswer }) => {
-    console.log(option);
+    const [correctCount, setCorrectCount] = useContext(CorrectContex);
+    const [wrongCount, setWrongCount] = useContext(WrongContext);
     const handleOption = () => {
         if (option === correctAnswer) {
+            setCorrectCount(correctCount + 1)
             toast('Great! You select the right answer', {
                 position: "top-center",
                 autoClose: 5000,
@@ -18,6 +21,7 @@ const Options = ({ option, index, correctAnswer }) => {
             });
         }
         else {
+            setWrongCount(wrongCount + 1)
             toast('Opps! Your answer is wrong.', {
                 position: "top-center",
                 autoClose: 5000,
