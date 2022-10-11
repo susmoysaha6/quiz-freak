@@ -20,11 +20,11 @@ const Quiz = () => {
                                 questions.map((question, index) => <SingleQuiz key={question.id} quiz={question} index={index} ></SingleQuiz>)
                             }
                         </div>
-                        <div className='shadow-lg ml-5 mt-24 h-fit py-4'>
-                            <h1 className='font-bold text-4xl text-green-400'>Result Section</h1>
-                            <h1 className='text-gray-600 font-bold mt-6 text-2xl'>Correct Answer: {correctCount}</h1>
-                            <h1 className='text-gray-600 font-bold mt-6 text-2xl'>Wrong Answer: {wrongCount}</h1>
-                            <h1 className='text-gray-600 font-bold mt-6 text-2xl'>Total Attempts: {correctCount + wrongCount}</h1>
+                        <div className='shadow-lg ml-5 mt-24 h-fit py-4 px-2 rounded'>
+                            <h1 className='font-bold text-3xl text-green-400'>Result Section</h1>
+                            <h1 className='text-gray-600 font-bold mt-6 text-lg'>Correct Answer: {correctCount}</h1>
+                            <h1 className='text-gray-600 font-bold mt-6 text-lg'>Wrong Attempts: {wrongCount}</h1>
+                            <h1 className='text-gray-600 font-bold mt-6 text-lg'>Total Attempts: {correctCount + wrongCount}</h1>
                         </div>
                     </div>
                 </div>
