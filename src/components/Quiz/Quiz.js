@@ -7,10 +7,10 @@ const Quiz = () => {
     const { name, questions } = data;
 
     return (
-        <div className='mt-6'>
+        <div className='mt-6 w-3/4 lg:w-1/2 mx-auto'>
             <h1 className='text-3xl font-semibold text-gray-600 mb-10'>Quiz of {name}</h1>
             {
-                questions.map(question => <SingleQuiz key={question.id} quiz={question}></SingleQuiz>)
+                questions.map((question, index) => <SingleQuiz key={question.id} quiz={question} index={index}></SingleQuiz>)
             }
         </div>
     );
