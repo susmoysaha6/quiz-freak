@@ -1,3 +1,16 @@
+# Project Name: Quiz Freak
+## Live Website: https://quiz-freak-84e372.netlify.app/
+### Tecnology used in my project: (i) React, (ii) React router, (iii) Recharts, (iv) Tailwind CSS, (v) Context API
+
+## Description in short:
+* I used react to build this site.
+* Then I implemented react-router-dom for routing
+* I used loader from react-router-dom for data loading. 
+* And I used useLoaderData() hook to get the data for use.
+* Then I used recharts in statistics route for graphical representation.
+* In blog section added some frequently asked question.
+* For styling I used tailwind.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
